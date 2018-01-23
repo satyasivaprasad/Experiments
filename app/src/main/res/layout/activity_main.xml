@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.photoslib.siva.mysamplepulseanim.MainActivity">
+
+    <com.skyfishjy.library.RippleBackground
+        android:id="@+id/content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:rb_color="#0099CC"
+        app:rb_duration="5000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="1"
+        app:rb_scale="1">
+
+        <ImageView
+            android:id="@+id/centerImage"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_launcher" />
+    </com.skyfishjy.library.RippleBackground>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/playBtn"
+            android:layout_width="44dp"
+            android:layout_height="43dp"
+            android:src="@mipmap/play_unheard"/>
+
+        <RelativeLayout
+            android:id="@+id/pulseView"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="2.5dp"
+            android:layout_marginLeft="4dp"
+            android:background="@mipmap/overl_2"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
