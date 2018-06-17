@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5" >
+
+    <LinearLayout
+        android:id="@+id/topLL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/skutxt"
+            style="@style/textbasic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="Select Agent Name" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <Spinner
+                android:id="@+id/placeOrderSpin"
+                style="@style/spinner_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="35dp"
+                android:layout_marginTop="7dp"
+                android:gravity="left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+             <TextView
+                android:id="@+id/gtype"
+                style="@style/textbasic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleHeader"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Game Type : Milan" />
+            
+            <TextView
+                android:id="@+id/version"
+                style="@style/textbasic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titleHeader"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Number : 19" />
+
+            <TextView
+                android:id="@+id/amount"
+                style="@style/textbasic"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/version"
+                android:layout_weight="1"
+                android:gravity="center_horizontal"
+                android:padding="10dp"
+                android:text="Amount : 1900" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnContinue"
+                style="@style/basicBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:onClick="onClickContent"
+                android:padding="5dp"
+                android:text="OK" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

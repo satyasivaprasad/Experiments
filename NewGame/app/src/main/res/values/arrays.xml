@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="games">
+        <item>Day Milan</item>
+        <item>Night Milan</item>
+        <item>Kalyan</item>
+        <item>Ratan</item>
+    </string-array>
+    
+    
+      <string-array name="wareIds">
+        <item>WareHouse 1</item>
+        <item>WareHouse 2</item>
+        <item>WareHouse 3</item>
+        <item>WareHouse 4</item>
+    </string-array>
+    
+       <string-array name="homeItems">
+        <item>@string/title_section1</item>
+        <item>@string/title_section2</item>
+        <item>@string/title_section3</item>
+        <item>@string/title_section4</item>
+        <item>@string/title_section5</item>
+        <item>@string/title_section6</item>
+        <item>@string/title_section7</item>
+        <item>@string/title_section8</item>
+    </string-array>
+    
+       
+    <string-array name="num_1_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>0</item>
+    </string-array>
+      
+</resources>

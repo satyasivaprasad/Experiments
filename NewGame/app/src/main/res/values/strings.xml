@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DesignPOCApp</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="show"><u>Show</u></string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="title_activity_verification">VerificationActivity</string>
+    <string name="resend">Resend</string>
+    <string name="continues">Continue</string>
+    <string name="verification_msg">A registration code given to you</string>
+    <string name="code">Enter registration code</string>
+    <string name="title_activity_main_info">MainInfoActivity</string>
+    <string name="title_section1">SSS</string>
+    <string name="title_section2">AK</string>
+    <string name="title_section3">SV</string>
+    <string name="title_section4">MM</string>
+    <string name="title_section5">Raju</string>
+    <string name="title_section6">YA</string>
+    <string name="title_section7">AS</string>
+    <string name="title_section8">VVV</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="validator_email">The e-mail address is not in a valid format.</string>
+    <string name="validator_empty">You must complete this field.</string>
+    <string name="validator_url">The URL entered is incorrect.</string>
+    <string name="validator_confirm">The confirm field is not valid.</string>
+    <string name="validator_alnum">The value has not only alnum characters.</string>
+    <string name="validator_hex">The value has not only hexadecimal digit characters.</string>
+    <string name="validator_regexp">The value does not match against pattern.</string>
+    <string name="validator_phone">Phone number is not in a valid format.</string>
+    <string name="validator_range">The value is not between the required range.</string>
+    <string name="validator_date">The entered date is not valid.</string>
+    <string name="validator_ip">The ip address is not valid.</string>
+    <string name="validator_num">Inputed text contains something that isn\'t numeric.</string>
+    <string name="validations_not_positive_integer">Field should be positive integer</string>
+    <string name="title_activity_transactions">Transactions</string>
+    <string name="title_current_transactions"><u>Current Transactions</u></string>
+    <string name="title_activity_sample_main">SampleMainActivity</string>
+
+</resources>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ Copyright (C) 2012 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+
+    <color name="list_background">#ffffff</color>
+    <color name="popup_bg_color">#ffffff</color>
+    <color name="ljs_bg">#f5f5f5</color>
+    <color name="action_color">#ED3B3B</color>
+    <!-- <color name="title_bar_header">#ffffff</color> -->
+    <color name="settings_background">@android:color/white</color>
+    <color name="action_bar_bg">#ED3B3B</color>
+    <color name="list_bg_pressed">#999999</color>
+    <color name="settings_age_gender_privacy_text">#252525</color>
+    <color name="favorites_channel_list_background">#303030</color>
+    <color name="favorites_channel_title">@color/ljs_yellow</color>
+    <color name="favorites_channel_list_divider">#2C2C2C</color>
+    <color name="favorites_channel_top_divider">#2C2C2C</color>
+    <color name="favorites_channels_edit_list_bg">#2C2C2C</color>
+    <color name="favorites_channels_edit_list_divider">#2C2C2C</color>
+    <color name="favorites_shows_bg">#2C2C2C</color>
+    <color name="favorites_shows_top_list_divider">@android:color/transparent</color>
+    <color name="favorites_shows_grid_bg">@color/favorites_shows_bg</color>
+    <color name="abc_next_btn_bg">#fed316</color>
+    <color name="abc_next_btn_bg_disabled">#202020</color>
+    <color name="abc_next_btn_text">#000000</color>
+    <color name="abc_next_btn_text_disabled">#ffffff</color>
+    <color name="favorites_channel_list_row_bg">#252525</color>
+    <color name="list_selector_pressed">#EFEFEF</color>
+    <color name="settings_add_room_name_header_text">@android:color/black</color>
+    <color name="settings_add_room_divider">@android:color/transparent</color>
+    <color name="divider_color">#e1e1e1</color>
+    <color name="divider_type_1">#e1e1e1</color>
+    <!-- with white bg -->
+    <color name="divider_type_2">#7e7e7e</color>
+    <!-- with black bg -->
+    <color name="divider_type_3">#303030</color>
+    <!-- with black bg -->
+    <color name="detail_divider">#e1e1e1</color>
+    <color name="show_details_list_item_bg">@android:color/white</color>
+    <color name="show_details_synopsis_details_bg">@android:color/white</color>
+    <color name="show_details_on_demand_header_bg">@color/off_white</color>
+    <color name="show_details_on_demand_header_unknown_season_text">#252525</color>
+    <color name="card_backgroud">@android:color/white</color>
+    <color name="twitter_bottom_box">@android:color/white</color>
+    <color name="twitter_link_color">#00b3f1</color>
+    <color name="twitter_user_name_color">#9b9b9b</color>
+    <color name="twitter_login_bg">@android:color/transparent</color>
+    <color name="off_white">#f2f1ed</color>
+    <color name="dark_grey_3">#383737</color>
+    <color name="dark_grey_2">#303030</color>
+    <color name="dark_grey_1">#252525</color>
+    <color name="slate_grey">#212020</color>
+    <!-- From UI spec, ljs accent colors -->
+    <color name="ljs_yellow">#edc900</color>
+    <color name="ljs_lime_green">#6fcd0a</color>
+    <color name="ljs_red">#ff0000</color>
+    <color name="ljs_magenta">#e02745</color>
+    <color name="ljs_selector_bg">#e1e1e1</color>
+    <color name="favorites_header_bg">#2C2C2C</color>
+    <color name="favorites_divider">#2C2C2C</color>
+    <color name="country_region_text_normal">#252525</color>
+    <color name="now_playing_widget_text">#999999</color>
+    <color name="now_playing_widget_text_sdk21">#333333</color>
+    <color name="now_playing_widget_text_sdk21_opacity">#B3333333</color>
+    <color name="now_playing_widget_bg_sdk_21">#fafafa</color>
+    <color name="now_playing_widget_divider_sdk_21">#c4c4c4</color>
+    <color name="notification_widget_collapsed_bg">#fafafa</color>
+    <color name="notification_widget_expanded_bg">#000000</color>
+    <color name="notification_widget_activity_title">@android:color/white</color>
+    <color name="notification_ctrl_header_bg">#2f2f2f</color>
+    <color name="notification_ctrl_header_device_btn">#2f2f2f</color>
+    <color name="notification_ctrl_header_hide_btn">#4e4e4e</color>
+    <color name="view_program_guide_bg">#1e1e1e</color>
+    <color name="notification_widget_collapsed_title">#333333</color>
+    <color name="notification_widget_collapsed_appname">#B3333333</color>
+    <color name="notification_widget_setup_bg">#fafafa</color>
+    <color name="notification_widget_setup_img_bg">#d5d5d5</color>
+    <color name="notification_widget_setup_btn">#333333</color>
+    <color name="notification_bg">#fafafa</color>
+    <color name="visual_program_guide_bg">#1e1e1e</color>
+    <color name="shadow_color">#000000</color>
+    <color name="transparent_70">#B3000000</color>
+    <color name="transparent_yellow">#E5EDC900</color>
+    <color name="light_gray">#c7c7c7</color>
+    <color name="sports_bg">#1a1a1a</color>
+    <color name="red">#FF0000</color>
+    <color name="listview_headercolor">#043243</color>
+    <color name="showdetails_bg_color">#1a1a1a</color>
+
+    <drawable name="search_cursor_color">#FFFFFF</drawable>
+
+    <color name="action_search">#005D6F</color>
+    <color name="white">#ffffff</color>
+    <color name="blue2">#32bbcf</color>
+    <color name="settings_age_gender_privacy_link">#21dcda</color>
+    <color name="spinner_state_pressed">#00859f</color>
+    <color name="tile_background">#00151c</color>
+    <color name="tile_text_color">@android:color/white</color>
+    <color name="notification_widget_bg">#000000</color>
+    <color name="now_playing_widget_bg">#000000</color>
+    <color name="tileBarHeader_tile_color">@color/white</color>
+    <color name="tileBarHeader_tile_color_personalize">@android:color/white</color>
+    <color name="search_title_text_background">@color/off_white</color>
+    <color name="search_title_textColor">#252525</color>
+    <color name="search_background">#ffffff</color>
+    <color name="searched_item_textColor">#252525</color>
+    <color name="search_auto_complete_textColor">#252525</color>
+    <color name="search_row_textColor">#252525</color>
+    <color name="search_row_background">@color/popup_bg_color</color>
+    <color name="personalization_textview_bg">@android:color/white</color>
+    <color name="popup_list_item_bg">#F4F4F4</color>
+    <!-- winset page 33, modal windows -->
+    <!-- end of PSR -->
+
+    <color name="personalization_textview_color">@color/visual_program_guide_bg</color>
+    <color name="channel_setting_row_name">#f5f5f5</color>
+    <color name="no_content_view_textview">#ffffff</color>
+    <color name="schedule_for_channels_bg">@color/favorites_channel_list_background</color>
+    <color name="time_header_row_bg">#f7f7f7</color>
+    <color name="time_header_row_text">#000000</color>
+    <color name="feedback_text">#000000</color>
+    <color name="setup_text_color">#252525</color>
+    <color name="spinner_bg_stateful_pressed">#5AC7DB</color>
+    <color name="spinner_bg_stateful">#ffffff</color>
+    <color name="dark_list_selector_color">#424242</color>
+    <color name="checkbox_enabled">#fed316</color>
+    <color name="checkbox_disabled">#8e8e8e</color>
+    <color name="settings_text_color">#252525</color>
+    <color name="remote_ctrl_pad_text">#57696f</color>
+    <color name="dtv_login_form_text">#000000</color>
+    <color name="rename_room_text">#000000</color>
+    <color name="noti_widget_collapsed_divider">#DEDEDE</color>
+    <color name="roku_ip_text_color">#000000</color>
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#23303f</color>
+    <color name="bg_main">#428bca</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="header_txt">#008ACE</color>
+    <color name="general">#26ae90</color>
+    <color name="open">#438ded</color>
+    <color name="bracket">#6fcd0a</color>
+    <color name="close">#e02745</color>
+    <color name="cpwana">#fed316</color>
+    <color name="dmilan">#FBE5CE</color>
+    <color name="nmilan">#E9D1DC</color>
+    <color name="kalyan">#FFF1CE</color>
+    <color name="rathan">#CCCCCC</color>
+
+</resources>

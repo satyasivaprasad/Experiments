@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#f5f5f5" >
+
+    
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User name"
+            android:layout_marginBottom="10dp"
+            style="@style/listItemText" />
+
+        <EditText
+            android:id="@+id/editText3"
+            style="@style/editTxt_normal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:singleLine="true" />
+    </LinearLayout>
+    
+    
+     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:layout_marginBottom="10dp"
+            style="@style/listItemText" />
+
+        <EditText
+            android:id="@+id/passwordEdit"
+            style="@style/editTxt_normal"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:inputType="textPassword"
+            android:singleLine="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnContinue"
+            style="@style/basicBtnStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="5dp"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/continues"
+            android:onClick="onVerifyClick" />
+    </LinearLayout>
+
+</LinearLayout>

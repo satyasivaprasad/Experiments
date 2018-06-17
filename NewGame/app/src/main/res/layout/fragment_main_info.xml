@@ -1,0 +1,270 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout" >
+
+    <RelativeLayout
+        android:id="@+id/topRel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/samplel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_toLeftOf="@+id/btmLayout" >
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/listItemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="Game Type :" />
+
+             <Spinner
+                android:id="@+id/placeOrderSpin"
+                style="@style/spinner_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="55dp"
+                android:gravity="left" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btmLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal"
+            android:padding="5dp" >
+
+            <Button
+                android:id="@+id/btnContinue"
+                style="@style/basicBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:onClick="onClickContent"
+                android:padding="15dp"
+                android:text="Confirm" />
+            
+            <Button
+                android:id="@+id/btnTransactions"
+                style="@style/basicBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:onClick="onClickContent"
+                android:padding="15dp"
+                android:text="Transactions" 
+                />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <HorizontalScrollView
+        android:id="@+id/horiScroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topRel"
+        android:fillViewport="true"
+        android:padding="5dp"
+        android:scrollbars="none" >
+
+        <com.newgame.uihelper.SegmentedRadioGroup
+            android:id="@+id/segment_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@+id/vaccination_radio_post"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/open"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="50dip"
+                android:text="OPEN"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/pawn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="50dip"
+                android:text="BRACKET"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/close"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="50dip"
+                android:text="CLOSE"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/openPawna"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="50dip"
+                android:text="O PAWNA"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:layout_height="wrap_content" />
+
+            <RadioButton
+                android:id="@+id/closePawna"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:minHeight="50dip"
+                android:text="C PAWNA"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/radio_colors"
+                android:layout_height="wrap_content" />
+        </com.newgame.uihelper.SegmentedRadioGroup>
+    </HorizontalScrollView>
+
+    <RelativeLayout
+        android:id="@+id/headerrEL"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/horiScroll" >
+
+        
+         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="horizontal"
+            android:paddingRight="8dp"
+            android:layout_centerVertical="true"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textbasic1_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Total Amount :" />
+
+            <TextView
+                android:id="@+id/totAmount"
+                style="@style/textbasic1_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="12" />
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/titleHeader"
+            style="@style/header_h1_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="Add Number" />
+        
+           <Button
+                android:id="@+id/btnAddBracket"
+                style="@style/basicBtnStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="10dp"
+                android:onClick="onClickContent"
+                android:padding="15dp"
+                android:layout_centerVertical="true"
+                android:text="Add"
+                android:layout_alignParentRight="true" />
+        
+    </RelativeLayout>
+
+    <View
+        style="@style/divider_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/headerrEL" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/headerrEL"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="5dp" >
+
+            <LinearLayout
+                android:id="@+id/gridLl"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.newgame.uihelper.TwoWayGridView
+                    android:id="@+id/numbers_1_grid"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#E8E8E8"
+                    android:visibility="visible"
+                    app:cacheColorHint="#E8E8E8"
+                    app:columnWidth="92dp"
+                    app:gravity="center"
+                    app:horizontalSpacing="5dp"
+                    app:numColumns="auto_fit"
+                    app:numRows="auto_fit"
+                    app:rowHeight="40dp"
+                    app:scrollDirectionLandscape="horizontal"
+                    app:scrollDirectionPortrait="vertical"
+                    app:stretchMode="spacingWidthUniform"
+                    app:verticalSpacing="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/confirmLL"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gridLl"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:visibility="gone" >
+
+                <include
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    layout="@layout/add_amount" />
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

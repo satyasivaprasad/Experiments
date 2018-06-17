@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/descRel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+    <View
+        style="@style/divider_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+    
+        <LinearLayout
+            android:id="@+id/amountLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="horizontal"
+            android:paddingRight="8dp"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textbasic1_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Total Amount :" />
+
+            <TextView
+                android:id="@+id/totAmount"
+                style="@style/textbasic1_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="12" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/amountLL"
+            android:paddingRight="8dp"
+            android:layout_alignParentRight="true"
+            android:visibility="visible" >
+
+            <TextView
+                style="@style/textbasic1_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="Date:" />
+
+            <TextView
+                android:id="@+id/totDate"
+                style="@style/textbasic1_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dp"
+                android:text="" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/topRel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descRel" >
+
+        <TextView
+            android:id="@+id/textSeparator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="left"
+            android:padding="8dp"
+            android:text="Sample"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/header_txt"
+            android:textStyle="bold"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/topRel"
+        android:orientation="horizontal"
+        android:weightSum="2" >
+
+        
+        <View
+            style="@style/divider_bg"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/topRel" />
+        
+        <TextView
+            android:id="@+id/number"
+            style="@style/textbasic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="10dp"
+            android:text="Number" />
+
+        <TextView
+            android:id="@+id/amount"
+            style="@style/textbasic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="Amount" 
+            android:layout_marginRight="20dp"/>
+
+        <TextView
+            android:id="@+id/time"
+            style="@style/textbasic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:gravity="right"
+            android:padding="10dp"
+            android:text="Time"
+            android:visibility="gone" />
+        
+        
+        <View
+            style="@style/divider_bg"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp" />
+        
+    </LinearLayout>
+
+    <View
+        style="@style/divider_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/topRel" />
+
+</RelativeLayout>
