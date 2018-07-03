@@ -171,10 +171,10 @@ public class TransactionsAdapter extends BaseAdapter {
 				holder.crossLeft.setVisibility(View.GONE);
 			}else if (mData.get(position).getGameTypeID() == 3) {
 				holder.crossRight.setVisibility(View.GONE);
-				holder.crossLeft.setVisibility(View.GONE);
+				holder.crossLeft.setVisibility(View.VISIBLE);
 			} else {
 				holder.crossRight.setVisibility(View.GONE);
-				holder.crossLeft.setVisibility(View.VISIBLE);
+				holder.crossLeft.setVisibility(View.GONE);
 			}
 			holder.deleteImg.setOnClickListener(new OnClickListener() {
 				

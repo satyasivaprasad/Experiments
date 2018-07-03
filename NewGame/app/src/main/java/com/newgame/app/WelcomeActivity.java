@@ -23,6 +23,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.newgame.BuildConfig;
 import com.newgame.R;
 import com.newgame.commons.CommonUtils;
 import com.newgame.commons.DateFormats;
@@ -101,6 +102,11 @@ public class WelcomeActivity extends AppCompatActivity {
             numIMEI = telephonyManager.getDeviceId();
             TextView imeiNumberTxt = (TextView) findViewById(R.id.imeiNumberTxt);
             imeiNumberTxt.setText(numIMEI);
+
+            String versionText = "v" + BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")";
+
+            TextView versionNUmberTxt = (TextView) findViewById(R.id.versionnumbertxt);
+            versionNUmberTxt.setText(versionText);
         }
 
     }
@@ -142,7 +148,7 @@ public class WelcomeActivity extends AppCompatActivity {
         TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
         numIMEI = telephonyManager.getDeviceId();
-        numIMEI = "358158071578052";
+//        numIMEI = "358158071578052";
         GamesLiveData.getAllTransactionDetails(new ApplicationThread.OnComplete<String>(ApplicationThread.OnComplete.UI) {
 
             @Override
@@ -258,7 +264,7 @@ public class WelcomeActivity extends AppCompatActivity {
             TelephonyManager telephonyManager = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
 
             numIMEI = telephonyManager.getDeviceId();
-            numIMEI = "351558071527586";
+//            numIMEI = "351558071527586";
             GamesLiveData.GetGenericData(new ApplicationThread.OnComplete<String>(ApplicationThread.OnComplete.UI) {
 
                 @Override

@@ -301,16 +301,16 @@ public class CommonUtils {
                 	colorCode = context.getResources().getColor(R.color.open);
                     break;
                 case 2:
-                	colorCode = context.getResources().getColor(R.color.close);
-                    break;
-                case 3:
                 	colorCode = context.getResources().getColor(R.color.bracket);
                     break;
+                case 3:
+                	colorCode = context.getResources().getColor(R.color.close);
+                    break;
                 case 4:
-                	colorCode = context.getResources().getColor(R.color.general);
+                	colorCode = context.getResources().getColor(R.color.cpwana);
                     break;
                 case 5:
-                	colorCode = context.getResources().getColor(R.color.cpwana);
+                	colorCode = context.getResources().getColor(R.color.general);
                     break;
             }
        

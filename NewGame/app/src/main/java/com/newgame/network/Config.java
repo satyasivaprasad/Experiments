@@ -18,4 +18,13 @@ public class Config {
     public static final String CheckTabIDAndEmi = "/CheckTabIDAndEmi?TabID=%s&EmiNO=%s";
     public static final String CheckUserNameAndPassword = "/CheckUserNameAndPassword?UserName=%s&password=%s&Imeno=%s";
 
+
+
+    public static String OPEN_ID = "1";
+    public static String BRACKET_ID = "2";
+    public static String CLOSE_ID = "3";
+    public static String CPANA_ID = "4";
+    public static String OPANA_ID = "5";
+
+
 }

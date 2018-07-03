@@ -1,42 +1,5 @@
 package com.newgame.ui;
 
-import java.lang.reflect.Type;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import com.newgame.R;
-import com.newgame.app.MainInfoActivity;
-import com.newgame.app.TransactionsActivity;
-import com.newgame.commons.CommonArrayAdapter;
-import com.newgame.commons.CommonUtils;
-import com.newgame.commons.DateFormats;
-import com.newgame.database.DatabaseHelper;
-import com.newgame.database.Queries;
-import com.newgame.models.GameJsonDataResult;
-import com.newgame.models.GameTransactionsModel;
-import com.newgame.models.SubGameStatus;
-import com.newgame.network.ApplicationThread;
-import com.newgame.network.Config;
-import com.newgame.network.GamesLiveData;
-import com.newgame.network.Log;
-import com.newgame.uihelper.TwoWayAdapterView;
-import com.newgame.uihelper.TwoWayGridView;
-import com.newgame.validator.Field;
-import com.newgame.validator.Form;
-import com.newgame.validator.NotEmpty;
-
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.Dialog;
@@ -67,6 +30,43 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.newgame.R;
+import com.newgame.app.MainInfoActivity;
+import com.newgame.app.TransactionsActivity;
+import com.newgame.commons.CommonArrayAdapter;
+import com.newgame.commons.CommonUtils;
+import com.newgame.commons.DateFormats;
+import com.newgame.database.DatabaseHelper;
+import com.newgame.database.Queries;
+import com.newgame.models.GameJsonDataResult;
+import com.newgame.models.GameTransactionsModel;
+import com.newgame.models.SubGameStatus;
+import com.newgame.network.ApplicationThread;
+import com.newgame.network.Config;
+import com.newgame.network.GamesLiveData;
+import com.newgame.network.Log;
+import com.newgame.uihelper.TwoWayAdapterView;
+import com.newgame.uihelper.TwoWayGridView;
+import com.newgame.validator.Field;
+import com.newgame.validator.Form;
+import com.newgame.validator.NotEmpty;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.lang.reflect.Type;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collection;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 public class MainFragment extends Fragment {
     private static final String LOG_TAG = MainFragment.class.getName();
@@ -231,15 +231,15 @@ public class MainFragment extends Fragment {
                      	amountEdit.requestFocus();
                      	CommonUtils.showKeyboard(getActivity(), amountEdit);
                      }else{
-                     	numberEdit.setText(""+String.valueOf(selectedPos+1));
-                     	amountEdit.setFocusable(true);
-                     	amountEdit.setCursorVisible(true);
-                     	amountEdit.requestFocus();
-                     	CommonUtils.showKeyboard(getActivity(), amountEdit);
+						 String text = (selectedPos == 9) ? "0" : String.valueOf(selectedPos + 1);
+						 numberEdit.setText(text);
+						 amountEdit.setFocusable(true);
+						 amountEdit.setCursorVisible(true);
+						 amountEdit.requestFocus();
+						 CommonUtils.showKeyboard(getActivity(), amountEdit);
                      }
                      
-                     if (CommonUtils.selectedGame.equalsIgnoreCase("3")) {
-                  
+                     if (CommonUtils.selectedGame.equalsIgnoreCase(Config.BRACKET_ID)) {
      					designConfirmDialog(""+String.valueOf((selectedPos < 10) ? "0"+selectedPos : selectedPos));
      				}
 				} else {
@@ -578,7 +578,7 @@ public class MainFragment extends Fragment {
 		if (clickedButtonName.equalsIgnoreCase("OPEN")) {
 			// TODO Auto-generated method stub
 			add_amount_rel.setVisibility(View.VISIBLE);
-			CommonUtils.selectedGame = "1";
+			CommonUtils.selectedGame = Config.OPEN_ID;
 			CommonUtils.selectedBg = 0;
 			bracketAddBtn.setVisibility(View.GONE);
 			CommonUtils.colorCode = getActivity().getResources().getColor(R.color.open);
@@ -596,7 +596,7 @@ public class MainFragment extends Fragment {
 		}else if (clickedButtonName.equalsIgnoreCase("BRACKET")) {
 			// TODO Auto-generated method stub
 			add_amount_rel.setVisibility(View.GONE);
-			CommonUtils.selectedGame = "3";
+			CommonUtils.selectedGame = Config.BRACKET_ID;
 			CommonUtils.colorCode = getActivity().getResources().getColor(R.color.bracket);
 			numOneAdapter.updateBackbg(1);
 			CommonUtils.selectedBg=1;
@@ -614,7 +614,7 @@ public class MainFragment extends Fragment {
 		}else if (clickedButtonName.equalsIgnoreCase("CLOSE")) {
 			// TODO Auto-generated method stub
 			add_amount_rel.setVisibility(View.VISIBLE);
-			CommonUtils.selectedGame = "2";
+			CommonUtils.selectedGame = Config.CLOSE_ID;
 			numOneAdapter.updateBackbg(2);
 			CommonUtils.selectedBg=2;
 			CommonUtils.colorCode = getActivity().getResources().getColor(R.color.close);
@@ -634,7 +634,7 @@ public class MainFragment extends Fragment {
 			// TODO Auto-generated method stub
 			add_amount_rel.setVisibility(View.VISIBLE);
 			CommonUtils.colorCode = getActivity().getResources().getColor(R.color.general);
-			CommonUtils.selectedGame = "4";
+			CommonUtils.selectedGame = Config.OPANA_ID;
 			CommonUtils.selectedBg=0;
 			bracketAddBtn.setVisibility(View.GONE);
 			numberGridView.setVisibility(View.GONE);
@@ -650,7 +650,7 @@ public class MainFragment extends Fragment {
 		} else if (clickedButtonName.equalsIgnoreCase("C PAWNA")) {
 			add_amount_rel.setVisibility(View.VISIBLE);
 			CommonUtils.colorCode = getActivity().getResources().getColor(R.color.general);
-			CommonUtils.selectedGame = "5";
+			CommonUtils.selectedGame = Config.CPANA_ID;
 			CommonUtils.selectedBg=0;
 			numberGridView.setVisibility(View.GONE);
 			numLinear.setVisibility(View.VISIBLE);
@@ -661,7 +661,7 @@ public class MainFragment extends Fragment {
 			getendtime_str = gtm.getCpanaEndTime();
 			refreshData();
 			bracketAddBtn.setVisibility(View.GONE);
-			
+
 		}
 		
 	}
@@ -840,7 +840,7 @@ public class MainFragment extends Fragment {
 				totalAmount.setText("0");
 			}
 		    
-         if (!CommonUtils.selectedGame.equalsIgnoreCase("3")) {
+         if (!CommonUtils.selectedGame.equalsIgnoreCase(Config.BRACKET_ID)) {
 			
 			dataCur = recordInsertDB.getdata(Queries.getInstance().getRecordDetails("EachEntryDetails",transId,"pending", getArguments().getString("AGENT_ID"), game_id));
 //			if (null != dataCur && dataCur.getCount()>0) {
