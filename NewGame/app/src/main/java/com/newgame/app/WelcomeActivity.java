@@ -46,7 +46,6 @@ public class WelcomeActivity extends AppCompatActivity {
 
     public static String numIMEI = "";
     List<HashMap> recordList = null;
-    private FrameLayout veriLayout;
     private static ProgressDialog progressDialog;
     private DatabaseHelper initialDB = null;
     private static SharedPreferences prefs;
@@ -54,8 +53,6 @@ public class WelcomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         initialDB = new DatabaseHelper(this);
         try {
             initialDB.createDataBase();
@@ -95,7 +92,6 @@ public class WelcomeActivity extends AppCompatActivity {
             }
 
             setContentView(R.layout.activity_welcome);
-            veriLayout = (FrameLayout) findViewById(R.id.container);
 
             TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
 
@@ -265,7 +261,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
             numIMEI = telephonyManager.getDeviceId();
 //            numIMEI = "351558071527586";
-            GamesLiveData.GetGenericData(new ApplicationThread.OnComplete<String>(ApplicationThread.OnComplete.UI) {
+            GamesLiveData.getGenericData(new ApplicationThread.OnComplete<String>(ApplicationThread.OnComplete.UI) {
 
                 @Override
                 public void run() {

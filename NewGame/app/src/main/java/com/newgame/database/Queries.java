@@ -29,7 +29,7 @@ public class Queries {
     }
     
     public String getRecordDetailsBasedonTransID(String transID){
-        return "SELECT EntryId,GameType,Number,Amount,Time,GameTypeId,TransId,UserId,UserName,Created_date,Updated_Date,Date FROM EachEntryDetails where TransId = '"+transID+"'"+";";
+        return "SELECT EntryId,GameType,Number,Amount,Time,GameTypeId,TransId,UserId,UserName,Created_date,Updated_Date,Date, SubAgentID FROM EachEntryDetails where TransId = '"+transID+"'"+";";
     }
     
     public String getSumDetails(String gameId, String userId,  String mainGameId) {

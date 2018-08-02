@@ -19,6 +19,16 @@ public class GameTransactionsModel implements Parcelable {
 	public String userId;
 	public String Created_date;
 	public String Updated_Date;
+
+	public int getSubAgentID() {
+		return SubAgentID;
+	}
+
+	public void setSubAgentID(int subAgentID) {
+		SubAgentID = subAgentID;
+	}
+
+	public int SubAgentID;
 	
 	public String getUpdated_Date() {
 		return Updated_Date;
@@ -45,6 +55,7 @@ public class GameTransactionsModel implements Parcelable {
         entryId = in.readString();
         gameType = in.readString();
         textColor = in.readInt();
+        SubAgentID = in.readInt();
     }
     
     public GameTransactionsModel() {

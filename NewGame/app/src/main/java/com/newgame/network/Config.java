@@ -17,6 +17,7 @@ public class Config {
     public static final String GetUserNameAndPassword = "/GetUserNameAndPassword?IMENO=%s";
     public static final String CheckTabIDAndEmi = "/CheckTabIDAndEmi?TabID=%s&EmiNO=%s";
     public static final String CheckUserNameAndPassword = "/CheckUserNameAndPassword?UserName=%s&password=%s&Imeno=%s";
+    public static final String SubAgentinfo = "/SubAgentinfo?AgentID=%s";
 
 
 

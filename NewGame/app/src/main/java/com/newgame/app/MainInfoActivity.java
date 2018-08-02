@@ -107,12 +107,7 @@ public class MainInfoActivity extends BaseActivity implements
 	
 	@Override
 	public void onNavigationDrawerItemSelected(final int position) {
-		
-		
-		
-		// update the main content by replacing fragments
-		
-		Handler handler = new Handler(); 
+	Handler handler = new Handler();
 	    handler.postDelayed(new Runnable() { 
 	         public void run() { 
 	        	if (null != agentsList && !agentsList.isEmpty()) {

@@ -218,7 +218,7 @@ public class GamesLiveData {
 
     }
     
-    public static void GetGenericData(final ApplicationThread.OnComplete<String> onComplete, final String url)
+    public static void getGenericData(final ApplicationThread.OnComplete<String> onComplete, final String url)
     {
         ApplicationThread.bgndPost(GamesLiveData.class.getName(),"SendBulkData....",new Runnable() {
             @Override

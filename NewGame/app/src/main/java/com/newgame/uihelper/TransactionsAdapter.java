@@ -1,12 +1,8 @@
 package com.newgame.uihelper;
 
-import java.util.ArrayList;
-import java.util.TreeSet;
-
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -23,6 +19,10 @@ import com.newgame.commons.CommonUtils;
 import com.newgame.database.DatabaseHelper;
 import com.newgame.database.Queries;
 import com.newgame.models.AllTransactionsModel;
+import com.newgame.network.Config;
+
+import java.util.ArrayList;
+import java.util.TreeSet;
 
 public class TransactionsAdapter extends BaseAdapter {
 
@@ -134,13 +134,16 @@ public class TransactionsAdapter extends BaseAdapter {
 
 		if (rowType == TYPE_ITEM) {
 			Log.v(LOG_TAG, "#### check date..."+mData.get(position).getDate());
-			holder.numberTxt.setText(""+mData.get(position).getNumber());
+			Integer gameTypeID = mData.get(position).getGameTypeID();
+			final String number = mData.get(position).getNumber();
+			holder.numberTxt.setText(""+ number);
+
 			holder.amountTxt.setText(""+mData.get(position).getAmount());
 			holder.timeTxt.setText(""+""+ CommonUtils.dateString(mData.get(position).getDate()));
 			holder.timeTxt.setVisibility(View.GONE);
-			holder.numberTxt.setTextColor(CommonUtils.giveColorCode(mData.get(position).getGameTypeID(), mContext));
-			holder.amountTxt.setTextColor(CommonUtils.giveColorCode(mData.get(position).getGameTypeID(), mContext));
-			holder.timeTxt.setTextColor(CommonUtils.giveColorCode(mData.get(position).getGameTypeID(), mContext));
+			holder.numberTxt.setTextColor(CommonUtils.giveColorCode(gameTypeID, mContext));
+			holder.amountTxt.setTextColor(CommonUtils.giveColorCode(gameTypeID, mContext));
+			holder.timeTxt.setTextColor(CommonUtils.giveColorCode(gameTypeID, mContext));
 			Log.v(LOG_TAG, "#### Edited By "+mData.get(position).getEditBy());
 			if (!TextUtils.isEmpty(mData.get(position).getEditBy()) && mData.get(position).getEditBy().length() > 0) {
 				holder.editedBy.setVisibility(View.VISIBLE);
@@ -166,10 +169,10 @@ public class TransactionsAdapter extends BaseAdapter {
 				}
 			});
 			
-			if (mData.get(position).getGameTypeID() == 1) {
+			if (gameTypeID == 1) {
 				holder.crossRight.setVisibility(View.VISIBLE);
 				holder.crossLeft.setVisibility(View.GONE);
-			}else if (mData.get(position).getGameTypeID() == 3) {
+			}else if (gameTypeID == 3) {
 				holder.crossRight.setVisibility(View.GONE);
 				holder.crossLeft.setVisibility(View.VISIBLE);
 			} else {
@@ -189,11 +192,11 @@ public class TransactionsAdapter extends BaseAdapter {
 				@Override
 				public void onClick(View v) {
 					// TODO Auto-generated method stub
-					mFragment.designConfirmDialog(position, String.valueOf(mData.get(position).getNumber()), String.valueOf(mData.get(position).getAmount()), String.valueOf(mData.get(position).getID()));
+					mFragment.designConfirmDialog(position, String.valueOf(number), String.valueOf(mData.get(position).getAmount()), String.valueOf(mData.get(position).getID()));
 				}
 			});
 		}else if (rowType == TYPE_SEPARATOR) {
-			holder.headerTxt.setText(""+mData.get(position).getAgentName()+" ("+mData.get(position).getGameName()+")");
+			holder.headerTxt.setText(""+mData.get(position).getAgentName()+" ("+mData.get(position).getGameName()+")" + " - " +mData.get(position).getSubAgentName());
 //			holder.totAmt.setText(""+mData.get(position).getGameName());
 			
 			

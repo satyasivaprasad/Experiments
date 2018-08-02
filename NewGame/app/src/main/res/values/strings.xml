@@ -39,5 +39,6 @@
     <string name="title_activity_transactions">Transactions</string>
     <string name="title_current_transactions"><u>Current Transactions</u></string>
     <string name="title_activity_sample_main">SampleMainActivity</string>
+    <string name="sub_agent_name">Sub Agent Name :</string>
 
 </resources>

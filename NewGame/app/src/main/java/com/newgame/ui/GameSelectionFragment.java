@@ -111,22 +111,26 @@ public class GameSelectionFragment extends Fragment {
 				if (CommonUtils.isNetworkAvailable(getActivity())) {
 					
 					if (null != gameId) {
-						  Intent mIntent = new Intent(getActivity(), MainInfoActivity.class);
-						  GameJsonDataResult gameObj = null;
-						  for (int i = 0; i < gameTimingsList.size(); i++) {
-							
-							  if (gameId.equalsIgnoreCase(gameTimingsList.get(i).getGameID())) {
-								  gameObj = gameTimingsList.get(i);
+						if (null != arrGames && arrGames.length > 0 && gameTimingsList != null && gameTimingsList.size() > 0) {
+							Intent mIntent = new Intent(getActivity(), MainInfoActivity.class);
+							GameJsonDataResult gameObj = null;
+							for (int i = 0; i < gameTimingsList.size(); i++) {
+
+								if (gameId.equalsIgnoreCase(gameTimingsList.get(i).getGameID())) {
+									gameObj = gameTimingsList.get(i);
+								}
 							}
+
+							if (gameObj == null) {
+								gameObj = gameTimingsList.get(0);
+							}
+							mIntent.putExtra("GAMEOBJ", gameObj);
+							mIntent.putExtra("GAMEID", gameId);
+							mIntent.putExtra("gamesArr", arrGames);
+							startActivity(mIntent);
+						} else {
+							Toast.makeText(getActivity(), "Games information not available", Toast.LENGTH_SHORT).show();
 						}
-						  
-						  if (gameObj == null) {
-							  gameObj = gameTimingsList.get(0);
-						}
-						  mIntent.putExtra("GAMEOBJ", gameObj);
-						  mIntent.putExtra("GAMEID", gameId);
-						  mIntent.putExtra("gamesArr", arrGames);
-						  startActivity(mIntent);	
 					} else {
 						Toast.makeText(getActivity(), "Please select game", Toast.LENGTH_SHORT).show();
 					}
@@ -175,6 +179,7 @@ public class GameSelectionFragment extends Fragment {
 	                catch (Exception e){
 	                    e.printStackTrace();
 	                    progressDialog.dismiss();
+						Toast.makeText(getActivity(), "Not able to get games information", Toast.LENGTH_SHORT).show();
 	                }
 
 	            }

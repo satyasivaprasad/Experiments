@@ -21,7 +21,6 @@ import android.database.sqlite.SQLiteStatement;
 
 import com.newgame.commons.CommonUtils;
 import com.newgame.models.GameTransactionsModel;
-import com.newgame.network.ApplicationThread;
 import com.newgame.network.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper{
@@ -433,6 +432,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 						 mDataModel.setCreated_date(mDataQuery.getString(mDataQuery.getColumnIndex("Created_date")));
 						 mDataModel.setUpdated_Date(mDataQuery.getString(mDataQuery.getColumnIndex("Updated_Date")));
 						 mDataModel.setTextColor(CommonUtils.giveColorCode(Integer.parseInt(mDataQuery.getString(mDataQuery.getColumnIndex("GameType"))), mContext));
+						 mDataModel.setSubAgentID(mDataQuery.getInt(mDataQuery.getColumnIndex("SubAgentID")));
 						 arrData.add(mDataModel);
 						 mDataModel = null;
 					} while (mDataQuery.moveToNext());

@@ -5,372 +5,328 @@ import com.google.gson.annotations.SerializedName;
 
 public class AllTransactionsModel {
 
-@SerializedName("ID")
-@Expose
-private Integer ID;
-@SerializedName("GameID")
-@Expose
-private Integer GameID;
-@SerializedName("GameTypeID")
-@Expose
-private Integer GameTypeID;
-@SerializedName("Amount")
-@Expose
-private Integer Amount;
-@SerializedName("Number")
-@Expose
-private Integer Number;
-@SerializedName("Date")
-@Expose
-private String Date;
-@SerializedName("AgentID")
-@Expose
-private Integer AgentID;
-@SerializedName("Created")
-@Expose
-private String Created;
-@SerializedName("UserID")
-@Expose
-private Integer UserID;
-@SerializedName("ModifiedDate")
-@Expose
-private String ModifiedDate;
-@SerializedName("TransactionID")
-@Expose
-private Integer TransactionID;
-@SerializedName("TabID")
-@Expose
-private Integer TabID;
-@SerializedName("GameName")
-@Expose
-private String GameName;
-@SerializedName("GameConfigName")
-@Expose
-private String GameConfigName;
-@SerializedName("TabName")
-@Expose
-private String TabName;
-@SerializedName("AgentName")
-@Expose
-private String AgentName;
-@SerializedName("TransactionTotal")
-@Expose
-private String TransactionTotal;
-@SerializedName("Editby")
-@Expose
-private String Editby;
-public String getEditBy() {
-	return Editby;
-}
+    @SerializedName("ID")
+    @Expose
+    private Integer ID;
+    @SerializedName("GameID")
+    @Expose
+    private Integer GameID;
+    @SerializedName("GameTypeID")
+    @Expose
+    private Integer GameTypeID;
+    @SerializedName("Amount")
+    @Expose
+    private Integer Amount;
+    @SerializedName("Number")
+    @Expose
+    private String Number;
+    @SerializedName("Date")
+    @Expose
+    private String Date;
+    @SerializedName("AgentID")
+    @Expose
+    private Integer AgentID;
+    @SerializedName("Created")
+    @Expose
+    private String Created;
+    @SerializedName("UserID")
+    @Expose
+    private Integer UserID;
+    @SerializedName("ModifiedDate")
+    @Expose
+    private String ModifiedDate;
+    @SerializedName("TransactionID")
+    @Expose
+    private Integer TransactionID;
+    @SerializedName("TabID")
+    @Expose
+    private Integer TabID;
+    @SerializedName("GameName")
+    @Expose
+    private String GameName;
+    @SerializedName("GameConfigName")
+    @Expose
+    private String GameConfigName;
+    @SerializedName("TabName")
+    @Expose
+    private String TabName;
+    @SerializedName("AgentName")
+    @Expose
+    private String AgentName;
+    @SerializedName("TransactionTotal")
+    @Expose
+    private String TransactionTotal;
+    @SerializedName("Editby")
+    @Expose
+    private String Editby;
 
-public void setEditBy(String editBy) {
-	Editby = editBy;
-}
+    @SerializedName("SubAgentID")
+    @Expose
+    private String SubAgentID;
 
-/**
-* 
-* @return
-* The ID
-*/
-public Integer getID() {
-return ID;
-}
+    @SerializedName("SubAgentName")
+    @Expose
+    private String SubAgentName;
 
-/**
-* 
-* @param ID
-* The ID
-*/
-public void setID(Integer ID) {
-this.ID = ID;
-}
+    public String getEditBy() {
+        return Editby;
+    }
 
-/**
-* 
-* @return
-* The GameID
-*/
-public Integer getGameID() {
-return GameID;
-}
+    public void setEditBy(String editBy) {
+        Editby = editBy;
+    }
 
-/**
-* 
-* @param GameID
-* The GameID
-*/
-public void setGameID(Integer GameID) {
-this.GameID = GameID;
-}
+    /**
+     * @return The ID
+     */
+    public Integer getID() {
+        return ID;
+    }
 
-/**
-* 
-* @return
-* The GameTypeID
-*/
-public Integer getGameTypeID() {
-return GameTypeID;
-}
+    /**
+     * @param ID The ID
+     */
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
 
-/**
-* 
-* @param GameTypeID
-* The GameTypeID
-*/
-public void setGameTypeID(Integer GameTypeID) {
-this.GameTypeID = GameTypeID;
-}
+    /**
+     * @return The GameID
+     */
+    public Integer getGameID() {
+        return GameID;
+    }
 
-/**
-* 
-* @return
-* The Amount
-*/
-public Integer getAmount() {
-return Amount;
-}
+    /**
+     * @param GameID The GameID
+     */
+    public void setGameID(Integer GameID) {
+        this.GameID = GameID;
+    }
 
-/**
-* 
-* @param Amount
-* The Amount
-*/
-public void setAmount(Integer Amount) {
-this.Amount = Amount;
-}
+    /**
+     * @return The GameTypeID
+     */
+    public Integer getGameTypeID() {
+        return GameTypeID;
+    }
 
-/**
-* 
-* @return
-* The Number
-*/
-public Integer getNumber() {
-return Number;
-}
+    /**
+     * @param GameTypeID The GameTypeID
+     */
+    public void setGameTypeID(Integer GameTypeID) {
+        this.GameTypeID = GameTypeID;
+    }
 
-/**
-* 
-* @param Number
-* The Number
-*/
-public void setNumber(Integer Number) {
-this.Number = Number;
-}
+    /**
+     * @return The Amount
+     */
+    public Integer getAmount() {
+        return Amount;
+    }
 
-/**
-* 
-* @return
-* The Date
-*/
-public String getDate() {
-return Date;
-}
+    /**
+     * @param Amount The Amount
+     */
+    public void setAmount(Integer Amount) {
+        this.Amount = Amount;
+    }
 
-/**
-* 
-* @param Date
-* The Date
-*/
-public void setDate(String Date) {
-this.Date = Date;
-}
+    /**
+     * @return The Number
+     */
+    public String getNumber() {
+        return Number;
+    }
 
-/**
-* 
-* @return
-* The AgentID
-*/
-public Integer getAgentID() {
-return AgentID;
-}
+    /**
+     * @param Number The Number
+     */
+    public void setNumber(String Number) {
+        this.Number = Number;
+    }
 
-/**
-* 
-* @param AgentID
-* The AgentID
-*/
-public void setAgentID(Integer AgentID) {
-this.AgentID = AgentID;
-}
+    /**
+     * @return The Date
+     */
+    public String getDate() {
+        return Date;
+    }
 
-/**
-* 
-* @return
-* The Created
-*/
-public String getCreated() {
-return Created;
-}
+    /**
+     * @param Date The Date
+     */
+    public void setDate(String Date) {
+        this.Date = Date;
+    }
 
-/**
-* 
-* @param Created
-* The Created
-*/
-public void setCreated(String Created) {
-this.Created = Created;
-}
+    /**
+     * @return The AgentID
+     */
+    public Integer getAgentID() {
+        return AgentID;
+    }
 
-/**
-* 
-* @return
-* The UserID
-*/
-public Integer getUserID() {
-return UserID;
-}
+    /**
+     * @param AgentID The AgentID
+     */
+    public void setAgentID(Integer AgentID) {
+        this.AgentID = AgentID;
+    }
 
-/**
-* 
-* @param UserID
-* The UserID
-*/
-public void setUserID(Integer UserID) {
-this.UserID = UserID;
-}
+    /**
+     * @return The Created
+     */
+    public String getCreated() {
+        return Created;
+    }
 
-/**
-* 
-* @return
-* The ModifiedDate
-*/
-public String getModifiedDate() {
-return ModifiedDate;
-}
+    /**
+     * @param Created The Created
+     */
+    public void setCreated(String Created) {
+        this.Created = Created;
+    }
 
-/**
-* 
-* @param ModifiedDate
-* The ModifiedDate
-*/
-public void setModifiedDate(String ModifiedDate) {
-this.ModifiedDate = ModifiedDate;
-}
+    /**
+     * @return The UserID
+     */
+    public Integer getUserID() {
+        return UserID;
+    }
 
-/**
-* 
-* @return
-* The TransactionID
-*/
-public Integer getTransactionID() {
-return TransactionID;
-}
+    /**
+     * @param UserID The UserID
+     */
+    public void setUserID(Integer UserID) {
+        this.UserID = UserID;
+    }
 
-/**
-* 
-* @param TransactionID
-* The TransactionID
-*/
-public void setTransactionID(Integer TransactionID) {
-this.TransactionID = TransactionID;
-}
+    /**
+     * @return The ModifiedDate
+     */
+    public String getModifiedDate() {
+        return ModifiedDate;
+    }
 
-/**
-* 
-* @return
-* The TabID
-*/
-public Integer getTabID() {
-return TabID;
-}
+    /**
+     * @param ModifiedDate The ModifiedDate
+     */
+    public void setModifiedDate(String ModifiedDate) {
+        this.ModifiedDate = ModifiedDate;
+    }
 
-/**
-* 
-* @param TabID
-* The TabID
-*/
-public void setTabID(Integer TabID) {
-this.TabID = TabID;
-}
+    /**
+     * @return The TransactionID
+     */
+    public Integer getTransactionID() {
+        return TransactionID;
+    }
 
-/**
-* 
-* @return
-* The GameName
-*/
-public String getGameName() {
-return GameName;
-}
+    /**
+     * @param TransactionID The TransactionID
+     */
+    public void setTransactionID(Integer TransactionID) {
+        this.TransactionID = TransactionID;
+    }
 
-/**
-* 
-* @param GameName
-* The GameName
-*/
-public void setGameName(String GameName) {
-this.GameName = GameName;
-}
+    /**
+     * @return The TabID
+     */
+    public Integer getTabID() {
+        return TabID;
+    }
 
-/**
-* 
-* @return
-* The GameConfigName
-*/
-public String getGameConfigName() {
-return GameConfigName;
-}
+    /**
+     * @param TabID The TabID
+     */
+    public void setTabID(Integer TabID) {
+        this.TabID = TabID;
+    }
 
-/**
-* 
-* @param GameConfigName
-* The GameConfigName
-*/
-public void setGameConfigName(String GameConfigName) {
-this.GameConfigName = GameConfigName;
-}
+    /**
+     * @return The GameName
+     */
+    public String getGameName() {
+        return GameName;
+    }
 
-/**
-* 
-* @return
-* The TabName
-*/
-public String getTabName() {
-return TabName;
-}
+    /**
+     * @param GameName The GameName
+     */
+    public void setGameName(String GameName) {
+        this.GameName = GameName;
+    }
 
-/**
-* 
-* @param TabName
-* The TabName
-*/
-public void setTabName(String TabName) {
-this.TabName = TabName;
-}
+    /**
+     * @return The GameConfigName
+     */
+    public String getGameConfigName() {
+        return GameConfigName;
+    }
 
-/**
-* 
-* @return
-* The AgentName
-*/
-public String getAgentName() {
-return AgentName;
-}
+    /**
+     * @param GameConfigName The GameConfigName
+     */
+    public void setGameConfigName(String GameConfigName) {
+        this.GameConfigName = GameConfigName;
+    }
 
-/**
-* 
-* @param AgentName
-* The AgentName
-*/
-public void setAgentName(String AgentName) {
-this.AgentName = AgentName;
-}
+    /**
+     * @return The TabName
+     */
+    public String getTabName() {
+        return TabName;
+    }
 
-/**
-* 
-* @return
-* The TransactionTotal
-*/
-public String getTransactionTotal() {
-return TransactionTotal;
-}
+    /**
+     * @param TabName The TabName
+     */
+    public void setTabName(String TabName) {
+        this.TabName = TabName;
+    }
 
-/**
-* 
-* @param TransactionTotal
-* The TransactionTotal
-*/
-public void setTransactionTotal(String TransactionTotal) {
-this.TransactionTotal = TransactionTotal;
-}
+    /**
+     * @return The AgentName
+     */
+    public String getAgentName() {
+        return AgentName;
+    }
 
+    /**
+     * @param AgentName The AgentName
+     */
+    public void setAgentName(String AgentName) {
+        this.AgentName = AgentName;
+    }
+
+    /**
+     * @return The TransactionTotal
+     */
+    public String getTransactionTotal() {
+        return TransactionTotal;
+    }
+
+    /**
+     * @param TransactionTotal The TransactionTotal
+     */
+    public void setTransactionTotal(String TransactionTotal) {
+        this.TransactionTotal = TransactionTotal;
+    }
+
+    public String getSubAgentID() {
+        return SubAgentID;
+    }
+
+    public void setSubAgentID(String subAgentID) {
+        SubAgentID = subAgentID;
+    }
+
+    public String getSubAgentName() {
+        return SubAgentName;
+    }
+
+    public void setSubAgentName(String subAgentName) {
+        SubAgentName = subAgentName;
+    }
 }

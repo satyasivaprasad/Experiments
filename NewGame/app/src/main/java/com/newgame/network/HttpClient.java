@@ -239,6 +239,43 @@ public class HttpClient {
         }
     }
 
+    public static String getDataFromServer(final String urlString)
+    {
+        System.out.println("url.."+urlString);
+        // check the connectivity mode
+        if (offline) {
+            return null;
+        }
+        org.apache.http.client.HttpClient client=new DefaultHttpClient();
+        HttpGet getRequest=new HttpGet();
+
+        try {
+            // construct a URI object
+
+            getRequest.setURI(new URI(urlString));
+
+        } catch (URISyntaxException e) {
+            Log.e("URISyntaxException", e.toString());
+        }
+
+        // buffer reader to read the response
+        BufferedReader in=null;
+        // the service response
+
+        try {
+            // execute the request
+            response = getStringFromInputStream(client.execute(getRequest).getEntity().getContent());
+            Log.i("Resposne  ", response);
+            return response;
+        } catch (ClientProtocolException e) {
+            Log.e("ClientProtocolException", e.toString());
+           return null;
+        } catch (IOException e) {
+            Log.e("IO exception", e.toString());
+            return null;
+        }
+    }
+
 
 	public static void deleteFromServer(final String urlString,  final ApplicationThread.OnComplete onComplete)
     {
@@ -336,11 +373,8 @@ public class HttpClient {
 
     // convert InputStream to String
     private static String getStringFromInputStream(InputStream is) {
-
-
         BufferedReader br = null;
         StringBuilder sb = new StringBuilder();
-
         String line;
         try {
 
@@ -348,7 +382,6 @@ public class HttpClient {
             while ((line = br.readLine()) != null) {
                 sb.append(line);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
